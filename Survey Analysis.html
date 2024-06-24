@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Survey Analysis Tool
+    </title>
+
+    <style>
+
+        body {
+            background-color: blueviolet;
+            font-family: sans-serif;
+            text-align: center;
+            font-style: italic;
+            font-size:x-large;
+        }
+        form {
+            background-color: #fff;
+            max-width: 1000px;
+            max-height: max-content;
+            margin: 100px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+        button {
+            background-color: #0ee267;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Survey Form for Student's Knowledge Level</h1>
+    <form id="form">
+        <div class="form-control">
+            <label for="name" id="label-name">
+                Name
+            </label>
+            <input type="text" id="name" 
+                   placeholder="Enter your name" />
+        </div>
+
+        <div class="form-control">
+            <label for="email" id="label-email">
+                Email
+            </label>
+
+            <input type="email" id="email" 
+                   placeholder="Enter your email" />
+        </div>
+
+        <div class="form-control">
+            <label for="age" id="label-age">
+                Age
+            </label>
+
+            <input type="text" id="age" 
+                   placeholder="Enter your age" />
+        </div>
+
+        <div class="form-control">
+            <label for="department" id="label-department">
+                Which department you belongs to?
+            </label>
+
+            <select name="branches" id="branch">
+                <option value="student">AIML</option>
+                <option value="student">CBSY</option>
+                <option value="student">AIDA</option>
+                <option value="student">MDEG</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label>
+                Which year do you belongs to?
+            </label>
+
+            <label for="recommend-1">
+                <input type="radio" id="recommend-1" 
+                       name="recommend">First Year
+                  </input>
+            </label>
+            <label for="recommend-2">
+                <input type="radio" id="recommend-2" 
+                       name="recommend">Second Year
+                  </input>
+            </label>
+            <label for="recommend-3">
+                <input type="radio" id="recommend-3" 
+                       name="recommend">Third Year
+                  </input>
+            </label>
+            <label for="recommend-4">
+                <input type="radio" id="recommend-4" 
+                       name="recommend">Final Year
+                  </input>
+            </label>
+        </div>
+
+        <div class="form-control">
+            <label>Languages and Frameworks known by you and has proficiency more than one month?
+                <small>(Check all that applied courseworks)</small>
+            </label>
+            <label for="inp-1">
+                <input type="checkbox" name="inp">C
+                  </input>
+              </label>
+            <label for="inp-2">
+                <input type="checkbox" name="inp">C++
+                  </input>
+            </label>
+            <label for="inp-3">
+                <input type="checkbox" name="inp">C#
+                  </input>
+            </label>
+            <label for="inp-4">
+                <input type="checkbox" name="inp">R 
+                  </input>
+            </label>
+            <label for="inp-5">
+                <input type="checkbox" name="inp">JAVA
+                  </input>
+            </label>
+            <label for="inp-6">
+                <input type="checkbox" name="inp">Python
+                  </input>
+            </label>
+            <label for="inp-7">
+                <input type="checkbox" name="inp">JavaScript
+                  </input>
+            </label>
+            <label for="inp-8">
+                <input type="checkbox" name="inp">React
+                  </input>
+            </label>
+            <label for="inp-9">
+                <input type="checkbox" name="inp">Angular
+                  </input>
+            </label>
+            <label for="inp-10">
+                <input type="checkbox" name="inp">Django
+                  </input>
+            </label>
+            <label for="inp-11">
+                <input type="checkbox" name="inp">Spring
+                  </input>
+            </label>
+            <label for="inp-12">
+                <input type="checkbox" name="inp">MySQL
+                  </input>
+            </label>
+        </div>
+
+        <div class="form-control">
+            <label for="comment">
+                Drop your feedbacks or message us here!!!!
+            </label>
+
+            <textarea name="comment" id="comment" 
+                      placeholder="Enter your feedbacks here">
+            </textarea>
+        </div>
+
+        <input type="file" name="Upload the files for data" id="csvFile" accept=".csv"/>
+        
+        <button type="submit" value="submit">
+            
+            Submit the form here
+        </button>
+    </form>
+</body>
+</html>

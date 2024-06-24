@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Analysis</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Survey Analysis Tool</h1>
+    <canvas id="surveyChart"></canvas>
+
+    <script>
+        const surveyData = {
+            survey_data | safe 
+    };
+        const questions = [...new Set(surveyData.map(item => item.question))];
+        const chartData = questions.map(question => {
+            return {
+                label: question,
+                data: surveyData.filter(item => item.question === question).map(item => item.count),
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            };
+        });
+
+        const ctx = document.getElementById('surveyChart').getContext('2d');
+        const surveyChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: surveyData.map(item => item.response),
+                datasets: chartData
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
